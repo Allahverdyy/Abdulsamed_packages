@@ -1,32 +1,23 @@
 library abdulsamed_package_1;
 
+import 'package:abdulsamed_package_1/widgets/package_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Metin Animasyonu Örneği'),
+          title: const Text('Packages Example'),
         ),
-        body: Center(
-          child: AnimatedTextKit(
-            animatedTexts: [
-              TypewriterAnimatedText(
-                'CHAT-GPT THANK YOU',
-                textStyle: TextStyle(
-                  fontSize: 36.0,
-                  fontWeight: FontWeight.bold,
-                ),
-                speed: Duration(milliseconds: 200),
-              ),
-            ],
-            totalRepeatCount: 3, // Animasyonu 3 kez tekrarlayın
-            pause: Duration(milliseconds: 1000), // Her tekrarda bir saniye bekleme
-          ),
-        ),
+        body: const PackageWidget(
+          leading: CircleAvatar(child: Icon(Icons.person)),
+          title: 'ABDULSAMED TANRIVERDI',
+        )
       ),
     );
   }
