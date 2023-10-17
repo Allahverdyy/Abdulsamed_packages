@@ -63,7 +63,7 @@ class MyWidget extends StatelessWidget {
 
 ## Screenshots
 
-![Application Screenshot]()
+![Image]()
 
 ## Contributing
 
