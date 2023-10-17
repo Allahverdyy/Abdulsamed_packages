@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
 class PackageWidget extends StatelessWidget {
-  final dynamic leading;
-  final String title;
+  final Widget leading;
+  final Widget title;
+  final Widget? subtitle;
+
   const PackageWidget({
-    super.key, this.leading, required this.title
+    super.key, required this.leading, required this.title, this.subtitle
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Column(children: [
+    return Column(children: [
       Card(
         child: ListTile(
-          leading: CircleAvatar(child: Icon(Icons.person)),
-          title: Text("Abdulsamed TANRIVERDI"),
-          subtitle: Text("20 Yıl"),
+          leading: leading,
+          title: title,
+          subtitle: subtitle,
         ),
       )
     ]);
