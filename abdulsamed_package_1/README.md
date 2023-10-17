@@ -1,39 +1,76 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+---
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Text Animation Example
+
+This Flutter application is a simple example that demonstrates text animations using the [animated_text_kit](https://pub.dev/packages/animated_text_kit) package.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Animated text display.
+- Repeating animations for text with customizable pause durations.
+- Support for customizing text styles.
 
-## Getting started
+## How to Use
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+1. Add the `animated_text_kit` package to your project's `pubspec.yaml` file as follows:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  animated_text_kit: ^latest_version
 ```
 
-## Additional information
+2. Add the `abdulsamed_package_1` package to your project. (Learn how to add your package at the project level [here](https://flutter.dev/docs/development/packages-and-plugins/using-packages)).
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+3. Create a file named `abdulsamed_package_1.dart` in your `lib` folder and include the following code:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Text Animation Example'),
+        ),
+        body: Center(
+          child: AnimatedTextKit(
+            animatedTexts: [
+              TypewriterAnimatedText(
+                'CHAT-GPT THANK YOU',
+                textStyle: TextStyle(
+                  fontSize: 36.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                speed: Duration(milliseconds: 200),
+              ),
+            ],
+            totalRepeatCount: 3, // Repeat the animation 3 times
+            pause: Duration(milliseconds: 1000), // Pause for one second between each repetition
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+4. Use the necessary Flutter commands to run your application.
+
+## Screenshots
+
+![Application Screenshot]()
+
+## Contributing
+
+If you wish to contribute, please submit a pull request or report issues. We welcome all forms of help and suggestions for contributing to the project.
+
+## License
+
+This project is licensed under the MIT License. For more information, please refer to the [LICENSE](LICENSE) file.
+
+---
