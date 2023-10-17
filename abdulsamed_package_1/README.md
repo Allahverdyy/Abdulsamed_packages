@@ -20,10 +20,16 @@ This Flutter application is a simple example that demonstrates text animations u
 dependencies:
   animated_text_kit: ^latest_version
 ```
+OR 
 
-2. Add the `abdulsamed_package_1` package to your project. (Learn how to add your package at the project level [here](https://flutter.dev/docs/development/packages-and-plugins/using-packages)).
+2. Go to the visual stuido code terminal:
 
-3. Create a file named `abdulsamed_package_1.dart` in your `lib` folder and include the following code:
+```
+flutter pub add animated_text_kit
+```
+3. Add the `abdulsamed_package_1` package to your project. (Learn how to add your package at the project level [here](https://flutter.dev/docs/development/packages-and-plugins/using-packages)).
+
+4. Create a file named `abdulsamed_package_1.dart` in your `lib` folder and include the following code:
 
 ```dart
 import 'package:flutter/material.dart';
