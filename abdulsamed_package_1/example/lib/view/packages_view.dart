@@ -13,9 +13,9 @@ class _PackageViewState extends State<PackageView> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(child: PackageWidget(
-        title: Text('sagdgasdj'),
+        title: Text('ABDULSAMED TANRIVERDI'),
         leading: CircleAvatar(child: Icon(Icons.person)),
-        subtitle: Text('data'),
+        subtitle: Text('22th year'),
         
       )),
     );
